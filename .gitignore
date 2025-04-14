@@ -178,6 +178,6 @@ cython_debug/
 /results
 
 
-/saved_roberta_emotion_model
+/saved_roberta_emotion_model-v1
 
 .DS_Store
