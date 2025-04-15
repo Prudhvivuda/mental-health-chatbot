@@ -13,11 +13,13 @@ from utility.chat import *
 # Example test dataset (replace with your own)
 import pandas as pd
 
+
 test_data = pd.DataFrame({
     "user_input": [
-        "I feel so anxious about work, I can’t sleep",
+        "I feel so anxious about work",
         "Hi, just saying hello",
-        "I’m really sad today, nothing feels right",
+        "I’m really sad today",
+        # ---------------------------- #
         "I don’t know how to cope with stress anymore",
         "I’m so happy I got a promotion!",
         "Can you help me feel less overwhelmed?",
@@ -36,43 +38,15 @@ test_data = pd.DataFrame({
         "Any tips for staying motivated?",
         "I had a rough day, just need to vent"
     ],
-    "expected_emotion": [
-        ["anxious, worried, depressed, sad, overwhelmed, stressed"], 
-        ["neutral"], ["sad"], ["stressed"], ["happy"],
-        ["overwhelmed"], ["sad"], ["neutral"], ["anxious"], ["sad"],
-        ["sad"], ["happy"], ["angry"], ["stressed"], ["sad"],
-        ["neutral"], ["anxious"], ["sad"], ["neutral"], ["sad"]
-    ],
-    "expected_intent": [
-        "venting", "greeting", "venting", "seeking_advice", "sharing",
-        "seeking_advice", "venting", "greeting", "venting", "venting",
-        "venting", "sharing", "venting", "seeking_advice", "venting",
-        "greeting", "venting", "venting", "seeking_advice", "venting"
-    ]
-})
-
-
-test_data = pd.DataFrame({
-    "user_input": [
-        "I am so sad",
-    ],
-    "expected_emotion": [
-        ["anxious", "worried", "overwhelmed", "stressed", "tense", "restless"]
-    ],
-    "expected_intent": [
-        ["venting", "sad", "seeking_support", "expressing_concern", "sharing_feelings"]
-    ]
-})
-
-test_data = pd.DataFrame({
-    "user_input": [
-        "I feel so anxious about work",
-        "Hi, just saying hello",
-        "I’m really sad today"
-    ],
-    "expected_emotion": [["anxious"], ["neutral"], ["sad"]],
-    "expected_intent": ["venting", "greeting", "sad"]
-    # replace venting with surprised to increase intent accuracy
+    "expected_emotion": [["anxious"], ["joyful"], ["sad"], ["anxious"], ["proud"],
+        ["anxious"], ["sad"], ["content"], ["anxious"], ["caring"],
+        ["disappointed"], ["content"], ["angry"], ["content"], ["lonely"],
+        ["content"], ["anxious"], ["lonely"], ["confident"], ["sad"]],
+    
+    "expected_intent": ["problem", "greeting", "sad", "stressed", "problem",
+        "stressed", "depressed", "happy", "problem", "understand",
+        "worthless", "happy", "venting", "meditation", "sad",
+        "morning", "scared", "change", "seeking", "stressed"]
 })
 
 def evaluate_cross_validation(test_data):

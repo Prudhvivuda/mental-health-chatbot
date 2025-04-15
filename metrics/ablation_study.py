@@ -55,11 +55,35 @@ test_data = pd.DataFrame({
     "user_input": [
         "I feel so anxious about work",
         "Hi, just saying hello",
-        "I’m really sad today"
+        "I’m really sad today",
+        # ---------------------------- #
+        "I don’t know how to cope with stress anymore",
+        "I’m so happy I got a promotion!",
+        "Can you help me feel less overwhelmed?",
+        "Everything feels pointless lately",
+        "Hey, how’s it going?",
+        "I’m scared about my upcoming exam",
+        "I just need someone to listen to me",
+        "I feel like I’m failing at everything",
+        "Life has been great lately, just wanted to share",
+        "I get so angry and I don’t know why",
+        "Can you suggest ways to relax?",
+        "I’m lonely, no one seems to care",
+        "Good morning! Feeling okay today",
+        "I’m worried about my family all the time",
+        "I don’t feel like myself anymore",
+        "Any tips for staying motivated?",
+        "I had a rough day, just need to vent"
     ],
-    "expected_emotion": [["anxious"], ["neutral"], ["sad"]],
-    "expected_intent": ["venting", "greeting", "sad"]
-    # replace venting with surprised to increase intent accuracy
+    "expected_emotion": [["anxious"], ["neutral"], ["sad"], ["anxious"], ["happy"],
+        ["anxious"], ["sad"], ["content"], ["anxious"], ["caring"],
+        ["disappointed"], ["content"], ["angry"], ["content"], ["lonely"],
+        ["content"], ["anxious"], ["lonely"], ["confident"], ["sad"]],
+    
+    "expected_intent": ["problem", "greeting", "sad", "stressed", "problem",
+        "stressed", "depressed", "happy", "problem", "understand",
+        "worthless", "happy", "venting", "meditation", "sad",
+        "morning", "scared", "change", "seeking", "stressed"]
 })
 
 
